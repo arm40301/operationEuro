@@ -31,19 +31,23 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: flex-start;
+      align-items: stretch;
       padding: 60px 40px;
+      gap: 20px;
     }
 
     .nav-button {
-      margin: 14px 0;
-      font-size: 26px;
-      font-weight: 700;
+      padding: 30px;
+      font-size: 30px;
+      font-weight: 800;
       color: white;
       text-transform: uppercase;
       text-decoration: none;
       transition: opacity 0.3s ease;
       cursor: pointer;
+      background: transparent;
+      border: none;
+      text-align: left;
     }
 
     .nav-button:hover {
@@ -56,7 +60,7 @@
       transition: max-height 0.4s ease;
       display: flex;
       flex-direction: column;
-      margin-top: 4px;
+      padding-left: 30px;
     }
 
     .nav-button.active + .sub-buttons {
@@ -65,10 +69,10 @@
 
     .sub-buttons a {
       color: white;
-      font-size: 20px;
+      font-size: 22px;
       text-decoration: none;
-      margin: 6px 0 6px 10px;
-      font-weight: 500;
+      margin: 4px 0;
+      font-weight: 600;
       transition: opacity 0.3s ease;
     }
 
@@ -79,13 +83,25 @@
     .main-title {
       width: 50%;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       color: white;
-      font-size: 80px;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .main-title h1 {
+      font-size: 90px;
       font-weight: 900;
       text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.8);
-      text-align: center;
+    }
+
+    .main-title p {
+      font-size: 26px;
+      font-weight: 400;
+      margin-top: 10px;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
     }
 
     @media (max-width: 768px) {
@@ -100,13 +116,17 @@
         align-items: center;
       }
 
-      .main-title {
+      .main-title h1 {
         font-size: 50px;
-        padding-top: 40px;
+      }
+
+      .main-title p {
+        font-size: 20px;
       }
 
       .nav-button {
-        font-size: 22px;
+        font-size: 24px;
+        text-align: center;
       }
     }
   </style>
@@ -123,7 +143,10 @@
     <a class="nav-button" href="contact.html">Contact</a>
   </div>
 
-  <div class="main-title">EURO PARTS</div>
+  <div class="main-title">
+    <h1>EURO PARTS</h1>
+    <p>Quality used parts</p>
+  </div>
 
   <script>
     function toggleInventory(element) {
