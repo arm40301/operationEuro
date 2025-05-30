@@ -1,9 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Junkyard Parts - Home</title>
+  <title>Junkyard Parts</title>
+
+  <!-- ✅ Modern Font + Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   <style>
     * {
       box-sizing: border-box;
@@ -11,21 +14,56 @@
       padding: 0;
     }
 
-    body, html {
-      height: 100%;
-      font-family: 'Segoe UI', sans-serif;
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
+      font-family: 'Inter', sans-serif;
       background: url('https://images.pexels.com/photos/16040396/pexels-photo-16040396/free-photo-of-blue-mercedes-w124.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=1080') no-repeat center center fixed;
       background-size: cover;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
+      height: 100vh;
     }
 
+    /* 🔧 NAVIGATION BAR */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.85);
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .logo {
+      color: white;
+      font-size: 20px;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .nav-links a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #00bfff;
+    }
+
+    /* 🔧 OVERLAY BOX */
     .overlay {
-      background-color: rgba(0, 0, 0, 0.5);
+      background-color: rgba(0, 0, 0, 0.6);
       padding: 60px 30px;
       border-radius: 15px;
       text-align: center;
@@ -33,6 +71,7 @@
       max-width: 500px;
       backdrop-filter: blur(8px);
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      margin-top: 80px;
     }
 
     h1 {
@@ -67,24 +106,20 @@
       .overlay {
         padding: 40px 20px;
       }
+
       h1 {
         font-size: 28px;
       }
+
       .btn {
         font-size: 18px;
         padding: 16px;
       }
+
+      .nav-links a {
+        font-size: 14px;
+        margin-left: 12px;
+      }
     }
   </style>
 </head>
-<body>
-
-  <div class="overlay">
-    <h1>Junkyard Parts</h1>
-    <a class="btn" href="inventory.html">View Inventory</a>
-    <a class="btn" href="about.html">About Us</a>
-    <a class="btn" href="contact.html">Contact</a>
-  </div>
-
-</body>
-</html>
