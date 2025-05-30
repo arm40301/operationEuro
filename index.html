@@ -1,153 +1,95 @@
-<!-- ✅ index.html -->
+<!-- ✅ index.html (Modern Split Layout) -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Junkyard Parts - Home</title>
-
-  <!-- ✅ Google Fonts & Font Awesome -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
   <style>
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
 
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body, html {
+    html, body {
       height: 100%;
       font-family: 'Inter', sans-serif;
+      display: flex;
     }
 
-    body {
-      background: url('https://images.pexels.com/photos/16040396/pexels-photo-16040396/free-photo-of-blue-mercedes-w124.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=1080') no-repeat center center fixed;
-      background-size: cover;
+    .left-panel {
+      width: 35%;
+      background: #111;
+      color: white;
       display: flex;
-      flex-direction: column;
       align-items: center;
       justify-content: center;
-    }
-
-    .overlay {
-      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3));
-      padding: 60px 30px;
-      border-radius: 15px;
+      padding: 40px;
       text-align: center;
-      width: 90%;
-      max-width: 500px;
-      backdrop-filter: blur(10px);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-      margin-top: 40px;
     }
 
-    h1 {
-      color: white;
-      margin-bottom: 35px;
-      font-size: 36px;
-      text-shadow: 1px 1px 4px black;
+    .left-panel h1 {
+      font-size: 32px;
+      line-height: 1.4;
     }
 
-    .btn {
-      display: block;
-      width: 100%;
-      margin: 15px 0;
-      padding: 18px;
+    .right-panel {
+      width: 65%;
+      background: #f4f4f4;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 60px;
+    }
+
+    .nav-button {
+      flex: 1;
+      margin: 10px 0;
+      padding: 20px;
+      background: #fff;
+      border: none;
+      border-radius: 12px;
       font-size: 20px;
       font-weight: 600;
-      letter-spacing: 0.5px;
-      color: white;
-      background: rgba(255, 255, 255, 0.08);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      border-radius: 12px;
-      text-decoration: none;
-      backdrop-filter: blur(8px);
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
       transition: all 0.3s ease;
     }
 
-    .btn:hover {
-      background: rgba(255, 255, 255, 0.2);
+    .nav-button:hover {
+      background: #e9ecef;
       transform: translateY(-2px);
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.6);
     }
 
-    .sub-buttons {
-      overflow: hidden;
-      max-height: 0;
-      transition: max-height 0.5s ease;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      margin-top: 0;
-    }
+    @media (max-width: 768px) {
+      html, body {
+        flex-direction: column;
+      }
 
-    .btn.active + .sub-buttons {
-      max-height: 200px;
-      margin-top: 10px;
-    }
-
-    .sub-buttons a {
-      padding: 14px;
-      font-size: 17px;
-      font-weight: 500;
-      background: rgba(255, 255, 255, 0.1);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      border-radius: 10px;
-      text-decoration: none;
-      color: white;
-      backdrop-filter: blur(6px);
-      transition: background 0.3s, transform 0.2s;
-    }
-
-    .sub-buttons a:hover {
-      background: rgba(255, 255, 255, 0.2);
-      transform: translateY(-1px);
-    }
-
-    @media (max-width: 500px) {
-      .overlay {
+      .left-panel, .right-panel {
+        width: 100%;
         padding: 40px 20px;
       }
 
-      h1 {
-        font-size: 28px;
-      }
-
-      .btn {
-        font-size: 18px;
-        padding: 16px;
+      .right-panel {
+        padding-top: 0;
       }
     }
   </style>
 </head>
 <body>
-
-  <div class="overlay">
-    <h1>Find Your Next Part</h1>
-    <a href="#" class="btn" onclick="toggleInventory(event)">View Inventory</a>
-    <div class="sub-buttons" id="inventory-options">
-      <a href="parts.html">Parts</a>
-      <a href="cars.html">Cars</a>
-    </div>
-    <a class="btn" href="services.html">Services</a>
-    <a class="btn" href="about.html">About Us</a>
-    <a class="btn" href="contact.html">Contact</a>
+  <div class="left-panel">
+    <h1>Junkyard Parts<br>Find Your Next Car or Part</h1>
   </div>
 
-  <script>
-    function toggleInventory(e) {
-      e.preventDefault();
-      const button = e.target;
-      button.classList.toggle('active');
-    }
-  </script>
-
+  <div class="right-panel">
+    <a href="parts.html"><button class="nav-button">Parts</button></a>
+    <a href="cars.html"><button class="nav-button">Cars</button></a>
+    <a href="services.html"><button class="nav-button">Services</button></a>
+    <a href="about.html"><button class="nav-button">About Us</button></a>
+    <a href="contact.html"><button class="nav-button">Contact</button></a>
+  </div>
 </body>
 </html>
