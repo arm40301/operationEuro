@@ -1,104 +1,153 @@
-<!-- ✅ services.html -->
+<!-- ✅ index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Our Services</title>
+  <title>Junkyard Parts - Home</title>
+
+  <!-- ✅ Google Fonts & Font Awesome -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   <style>
-    body {
+    * {
+      box-sizing: border-box;
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f2f2f2;
-      color: #333;
+      padding: 0;
     }
 
-    header {
-      background-color: #111;
-      padding: 15px 30px;
+    html {
+      scroll-behavior: smooth;
     }
 
-    .home-link {
-      color: white;
-      text-decoration: none;
-      font-size: 18px;
+    body, html {
+      height: 100%;
+      font-family: 'Inter', sans-serif;
     }
 
-    .home-link:hover {
-      text-decoration: underline;
+    body {
+      background: url('https://images.pexels.com/photos/16040396/pexels-photo-16040396/free-photo-of-blue-mercedes-w124.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=1080') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
 
-    .section {
-      background: linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(245, 245, 245, 0.9));
-      padding: 60px 20px;
+    .overlay {
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3));
+      padding: 60px 30px;
+      border-radius: 15px;
+      text-align: center;
+      width: 90%;
+      max-width: 500px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
       margin-top: 40px;
     }
 
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-    }
-
     h1 {
-      text-align: center;
+      color: white;
+      margin-bottom: 35px;
       font-size: 36px;
-      margin-bottom: 40px;
-      color: #111;
+      text-shadow: 1px 1px 4px black;
     }
 
-    .service {
-      margin-bottom: 40px;
+    .btn {
+      display: block;
+      width: 100%;
+      margin: 15px 0;
+      padding: 18px;
+      font-size: 20px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      color: white;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 12px;
+      text-decoration: none;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5);
+      transition: all 0.3s ease;
     }
 
-    .service h2 {
-      font-size: 22px;
-      color: #111;
-      margin-bottom: 10px;
+    .btn:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.6);
     }
 
-    .service p {
-      font-size: 18px;
-      line-height: 1.6;
-      color: #333;
+    .sub-buttons {
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 0.5s ease;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 0;
+    }
+
+    .btn.active + .sub-buttons {
+      max-height: 200px;
+      margin-top: 10px;
+    }
+
+    .sub-buttons a {
+      padding: 14px;
+      font-size: 17px;
+      font-weight: 500;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 10px;
+      text-decoration: none;
+      color: white;
+      backdrop-filter: blur(6px);
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .sub-buttons a:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: translateY(-1px);
+    }
+
+    @media (max-width: 500px) {
+      .overlay {
+        padding: 40px 20px;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+
+      .btn {
+        font-size: 18px;
+        padding: 16px;
+      }
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <a href="index.html" class="home-link">🏠 Home</a>
-  </header>
-
-  <section class="section">
-    <div class="container">
-      <h1>Our Services</h1>
-
-      <div class="service">
-        <h2>Used Car Parts Sales</h2>
-        <p>We sell tested, quality used auto parts at affordable prices. From alternators to bumpers, we’ve got what your vehicle needs.</p>
-      </div>
-
-      <div class="service">
-        <h2>Vehicle Dismantling</h2>
-        <p>We dismantle vehicles on-site and extract salvageable parts. Our experienced team ensures parts are carefully removed and inspected.</p>
-      </div>
-
-      <div class="service">
-        <h2>Junk Car Removal</h2>
-        <p>Have a car that’s beyond repair? We offer fast junk car pickup and fair pricing based on vehicle condition and scrap value.</p>
-      </div>
-
-      <div class="service">
-        <h2>Part Requests</h2>
-        <p>Looking for something specific? Fill out a request and we’ll help you find the part you need — even if it’s not in stock.</p>
-      </div>
-
-      <div class="service">
-        <h2>Local Delivery & Pickup</h2>
-        <p>We offer flexible options for local pickup and limited delivery. Contact us to arrange what works best for you.</p>
-      </div>
+  <div class="overlay">
+    <h1>Find Your Next Part</h1>
+    <a href="#" class="btn" onclick="toggleInventory(event)">View Inventory</a>
+    <div class="sub-buttons" id="inventory-options">
+      <a href="parts.html">Parts</a>
+      <a href="cars.html">Cars</a>
     </div>
-  </section>
+    <a class="btn" href="services.html">Services</a>
+    <a class="btn" href="about.html">About Us</a>
+    <a class="btn" href="contact.html">Contact</a>
+  </div>
+
+  <script>
+    function toggleInventory(e) {
+      e.preventDefault();
+      const button = e.target;
+      button.classList.toggle('active');
+    }
+  </script>
 
 </body>
 </html>
