@@ -1,0 +1,84 @@
+<!-- ✅ parts.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Parts Inventory</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #f3f3f3;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card-body {
+      padding: 15px;
+    }
+
+    .card-body h3 {
+      margin: 0 0 10px;
+      font-size: 18px;
+    }
+
+    .card-body p {
+      margin: 5px 0;
+      color: #555;
+      font-size: 15px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Available Parts</h1>
+  <div class="grid">
+    <div class="card">
+      <img src="https://via.placeholder.com/300x180?text=Alternator" alt="Alternator">
+      <div class="card-body">
+        <h3>2005 Honda Civic - Alternator</h3>
+        <p>Condition: Used - Works fine</p>
+        <p>Price: $60</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/300x180?text=Headlight" alt="Headlight">
+      <div class="card-body">
+        <h3>2010 Toyota Corolla - Headlight (Right)</h3>
+        <p>Condition: Like New</p>
+        <p>Price: $45</p>
+      </div>
+    </div>
+    <!-- Add more parts as needed -->
+  </div>
+</body>
+</html>
