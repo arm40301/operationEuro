@@ -3,129 +3,51 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Junkyard Parts</title>
+  <title>Junkyard Parts - Home</title>
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f2f2f2;
-    }
-
-    header {
-      background-color: #222;
-      color: white;
-      padding: 20px;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #111;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
       text-align: center;
     }
 
-    .container {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
+    h1 {
+      margin-bottom: 40px;
+      font-size: 2.5em;
     }
 
-    h1, h2 {
-      color: #333;
-    }
-
-    p {
-      color: #555;
-    }
-
-    .card {
-      background: white;
-      padding: 20px;
-      margin-bottom: 25px;
-      border-radius: 8px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-    }
-
-    .card h3 {
-      margin-top: 0;
-      color: #111;
-    }
-
-    form input,
-    form textarea {
-      width: 100%;
-      padding: 12px;
-      margin-bottom: 15px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      font-size: 15px;
-    }
-
-    form button {
-      padding: 12px 24px;
-      background-color: #007bff;
+    .btn {
+      display: block;
+      margin: 15px;
+      padding: 15px 30px;
+      font-size: 18px;
       color: white;
+      background-color: #007bff;
       border: none;
       border-radius: 6px;
-      font-size: 16px;
-      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.3s;
     }
 
-    form button:hover {
+    .btn:hover {
       background-color: #0056b3;
-    }
-
-    @media (max-width: 600px) {
-      .container {
-        margin: 20px;
-      }
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Junkyard Parts</h1>
-    <p>Affordable used auto parts • Fast replies • Local pickup</p>
-  </header>
+  <h1>Welcome to Junkyard Parts</h1>
 
-  <div class="container">
-    <div class="card">
-      <h3>2005 Honda Civic - Alternator</h3>
-      <p>Condition: Used - Works fine</p>
-      <p>Price: $60</p>
-    </div>
-
-    <div class="card">
-      <h3>2010 Toyota Corolla - Headlight (Right)</h3>
-      <p>Condition: Like New</p>
-      <p>Price: $45</p>
-    </div>
-
-    <div class="card">
-      <h3>2008 Ford Escape - Rear Bumper</h3>
-      <p>Condition: Used</p>
-      <p>Price: $70</p>
-    </div>
-
-    <div class="card">
-      <h3>2012 Mazda 3 - Side Mirror (Driver Side)</h3>
-      <p>Condition: Good</p>
-      <p>Price: $50</p>
-    </div>
-
-    <div class="card">
-      <h3>2007 BMW 328i - Radiator</h3>
-      <p>Condition: Tested, no leaks</p>
-      <p>Price: $100</p>
-    </div>
-
-    <h2>Contact Us</h2>
-    <p>Email: yourname@example.com</p>
-    <p>Phone: (123) 456-7890</p>
-
-    <h2>Request a Part</h2>
-    <form action="https://formspree.io/f/YOUR_ID" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="_replyto" placeholder="Your Email" required />
-      <textarea name="message" rows="4" placeholder="What part do you need?" required></textarea>
-      <button type="submit">Send Request</button>
-    </form>
-  </div>
+  <a class="btn" href="inventory.html">View Inventory</a>
+  <a class="btn" href="about.html">About Us</a>
+  <a class="btn" href="contact.html">Contact</a>
 
 </body>
 </html>
