@@ -1,4 +1,4 @@
-<!-- ✅ index.html (Modern Layout with Background Image and Left Panel Buttons) -->
+<!-- ✅ index.html (Modern Layout - Half Faded Left Panel & Bold Title) -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,46 +25,38 @@
     }
 
     .left-panel {
-      width: 35%;
-      background: rgba(0, 0, 0, 0.7);
+      width: 50%;
+      background: rgba(0, 0, 0, 0.55);
       color: white;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      padding: 60px 30px;
+      align-items: flex-start;
+      padding: 60px 40px;
     }
 
     .nav-button {
-      margin: 10px 0;
-      padding: 16px;
-      background: rgba(255, 255, 255, 0.1);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      border-radius: 10px;
-      font-size: 18px;
+      margin: 14px 0;
+      font-size: 22px;
+      font-weight: 500;
       color: white;
-      font-weight: 600;
-      text-align: center;
       text-decoration: none;
-      backdrop-filter: blur(6px);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-      transition: all 0.3s ease;
+      transition: opacity 0.3s ease;
     }
 
     .nav-button:hover {
-      background: rgba(255, 255, 255, 0.2);
-      transform: translateY(-2px);
+      opacity: 0.75;
     }
 
     .main-title {
-      flex: 1;
-      width: 65%;
+      width: 50%;
       display: flex;
       justify-content: center;
       align-items: center;
       color: white;
-      font-size: 52px;
-      font-weight: 700;
-      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+      font-size: 70px;
+      font-weight: 800;
+      text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.8);
       text-align: center;
     }
 
@@ -72,13 +64,21 @@
       body {
         flex-direction: column;
       }
+
       .left-panel, .main-title {
         width: 100%;
         padding: 40px 20px;
         text-align: center;
+        align-items: center;
       }
+
       .main-title {
-        font-size: 36px;
+        font-size: 40px;
+        padding-top: 40px;
+      }
+
+      .nav-button {
+        font-size: 20px;
       }
     }
   </style>
