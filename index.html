@@ -1,4 +1,4 @@
-<!-- ✅ index.html (Modern Layout - Half Faded Left Panel & Bold Title) -->
+<!-- ✅ index.html (Modern Layout - Updated Buttons & Inventory Dropdown) -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,15 +37,43 @@
 
     .nav-button {
       margin: 14px 0;
-      font-size: 22px;
-      font-weight: 500;
+      font-size: 26px;
+      font-weight: 700;
       color: white;
+      text-transform: uppercase;
       text-decoration: none;
       transition: opacity 0.3s ease;
+      cursor: pointer;
     }
 
     .nav-button:hover {
       opacity: 0.75;
+    }
+
+    .sub-buttons {
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 0.4s ease;
+      display: flex;
+      flex-direction: column;
+      margin-top: 4px;
+    }
+
+    .nav-button.active + .sub-buttons {
+      max-height: 120px;
+    }
+
+    .sub-buttons a {
+      color: white;
+      font-size: 20px;
+      text-decoration: none;
+      margin: 6px 0 6px 10px;
+      font-weight: 500;
+      transition: opacity 0.3s ease;
+    }
+
+    .sub-buttons a:hover {
+      opacity: 0.7;
     }
 
     .main-title {
@@ -54,8 +82,8 @@
       justify-content: center;
       align-items: center;
       color: white;
-      font-size: 70px;
-      font-weight: 800;
+      font-size: 80px;
+      font-weight: 900;
       text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.8);
       text-align: center;
     }
@@ -73,25 +101,34 @@
       }
 
       .main-title {
-        font-size: 40px;
+        font-size: 50px;
         padding-top: 40px;
       }
 
       .nav-button {
-        font-size: 20px;
+        font-size: 22px;
       }
     }
   </style>
 </head>
 <body>
   <div class="left-panel">
-    <a class="nav-button" href="parts.html">Parts</a>
-    <a class="nav-button" href="cars.html">Cars</a>
+    <div class="nav-button" onclick="toggleInventory(this)">Inventory</div>
+    <div class="sub-buttons">
+      <a href="parts.html">Parts</a>
+      <a href="cars.html">Cars</a>
+    </div>
     <a class="nav-button" href="services.html">Services</a>
     <a class="nav-button" href="about.html">About Us</a>
     <a class="nav-button" href="contact.html">Contact</a>
   </div>
 
   <div class="main-title">EURO PARTS</div>
+
+  <script>
+    function toggleInventory(element) {
+      element.classList.toggle('active');
+    }
+  </script>
 </body>
 </html>
